@@ -22,13 +22,13 @@ output "for_list_map" {
 # Output - For Loop with Map Advanced
 output "for_list_adv" {
   description = "for list map with instance"
-  value = {for i, instance in aws_aws_instance.demo: c => instance.public_dns }
+  value = {for i, instance in aws_instance.demo: c => instance.public_dns }
   
 }
 
 # Output Latest Generalized Splat Operator - Returns the List
 
-output "splt Operator" {
+output "splt_Operator" {
   description = "output with splat operator"
   value = aws_instance.demo[*].public_dns
   
