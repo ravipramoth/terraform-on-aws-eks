@@ -26,7 +26,10 @@ output "for_list_adv" {
   
 }
 
-
-
 # Output Latest Generalized Splat Operator - Returns the List
 
+output "splt Operator" {
+  description = "output with splat operator"
+  value = aws_instance.demo[*].public_dns
+  
+}
